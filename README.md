@@ -1,6 +1,6 @@
 # Flasked Vincent
 
-Demo Flask application of using Vincent to generate D3 charts using Vega grammar. Using the awesome Flask framework and the Vincent library makes it ridiculously easy to create D3 visualization without writing *any* client side code.
+Demo [Flask](http://flask.pocoo.org/) application of using [Vincent](https://github.com/wrobstory/vincent) to generate [D3](http://d3js.org/) charts using [Vega](http://trifacta.github.io/vega/) grammar. Using the awesome [Flask](http://flask.pocoo.org/) framework and the [Vincent](https://github.com/wrobstory/vincent) library makes it ridiculously easy to create [D3](http://d3js.org/) visualization without writing *any* client side code.
 
 ### Requirments
 
@@ -8,9 +8,10 @@ Demo Flask application of using Vincent to generate D3 charts using Vega grammar
  - Vincent
 
 ### Running
+```bash
+    $ git clone https://github.com/iiSeymour/flasked-vincent
+    $ cd flasked-vincent
+    $./vincent.app
+```
 
-    git clone https://github.com/iiSeymour/flasked-vincent
-    cd flasked-vincent
-    ./vincent.app
-
-Visit http://localhost:5000 in your browser, that's it!
+Visit [http://localhost:5000]() in your browser, that's it!
