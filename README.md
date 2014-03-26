@@ -9,9 +9,9 @@ Demo [Flask](http://flask.pocoo.org/) application of using [Vincent](https://git
 
 ### Running
 ```bash
-    $ git clone https://github.com/iiSeymour/flasked-vincent
-    $ cd flasked-vincent
-    $./vincent.app
+$ git clone https://github.com/iiSeymour/flasked-vincent
+$ cd flasked-vincent
+$ ./vincent.app
 ```
 
 Visit [http://localhost:5000]() in your browser, that's it!
