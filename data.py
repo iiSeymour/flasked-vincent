@@ -48,6 +48,6 @@ df_2 = pd.DataFrame(data_3, index=index_4)
 
 import pandas.io.data as web
 all_data = {}
-for ticker in ['AAPL', 'GOOG', 'IBM', 'YHOO', 'MSFT']:
-    all_data[ticker] = web.get_data_yahoo(ticker, '1/1/2010', '1/1/2013')
+for ticker in ['AAPL', 'IBM', 'YHOO', 'MSFT']:
+    all_data[ticker] = web.get_data_yahoo(ticker, '1/1/2012', '1/1/2014')
 price = pd.DataFrame({tic: data['Adj Close'] for tic, data in all_data.iteritems()})
