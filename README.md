@@ -15,3 +15,7 @@ $ ./vincent.app
 ```
 
 Visit [http://localhost:5000]() in your browser, that's it!
+
+### Static Demo
+
+https://iiseymour.github.io/flasked-vincent
