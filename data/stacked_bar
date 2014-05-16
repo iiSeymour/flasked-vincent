@@ -1,0 +1,239 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "title": "Total Produce",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "title": "Farms",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "apples",
+          "idx": "Farm 1",
+          "val": 10
+        },
+        {
+          "col": "berries",
+          "idx": "Farm 1",
+          "val": 32
+        },
+        {
+          "col": "corn",
+          "idx": "Farm 1",
+          "val": 18
+        },
+        {
+          "col": "melons",
+          "idx": "Farm 1",
+          "val": 13
+        },
+        {
+          "col": "squash",
+          "idx": "Farm 1",
+          "val": 21
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 2",
+          "val": 15
+        },
+        {
+          "col": "berries",
+          "idx": "Farm 2",
+          "val": 43
+        },
+        {
+          "col": "corn",
+          "idx": "Farm 2",
+          "val": 22
+        },
+        {
+          "col": "melons",
+          "idx": "Farm 2",
+          "val": 10
+        },
+        {
+          "col": "squash",
+          "idx": "Farm 2",
+          "val": 17
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 3",
+          "val": 6
+        },
+        {
+          "col": "berries",
+          "idx": "Farm 3",
+          "val": 24
+        },
+        {
+          "col": "corn",
+          "idx": "Farm 3",
+          "val": 30
+        },
+        {
+          "col": "melons",
+          "idx": "Farm 3",
+          "val": 16
+        },
+        {
+          "col": "squash",
+          "idx": "Farm 3",
+          "val": 22
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 4",
+          "val": 12
+        },
+        {
+          "col": "berries",
+          "idx": "Farm 4",
+          "val": 30
+        },
+        {
+          "col": "corn",
+          "idx": "Farm 4",
+          "val": 15
+        },
+        {
+          "col": "melons",
+          "idx": "Farm 4",
+          "val": 9
+        },
+        {
+          "col": "squash",
+          "idx": "Farm 4",
+          "val": 15
+        }
+      ]
+    },
+    {
+      "name": "stats",
+      "source": "table",
+      "transform": [
+        {
+          "keys": [
+            "data.idx"
+          ],
+          "type": "facet"
+        },
+        {
+          "type": "stats",
+          "value": "data.val"
+        }
+      ]
+    }
+  ],
+  "height": 300,
+  "legends": [
+    {
+      "fill": "color",
+      "offset": 0,
+      "title": "Produce Types"
+    }
+  ],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "keys": [
+              "data.col"
+            ],
+            "type": "facet"
+          },
+          {
+            "height": "data.val",
+            "point": "data.idx",
+            "type": "stack"
+          }
+        ]
+      },
+      "marks": [
+        {
+          "properties": {
+            "enter": {
+              "fill": {
+                "field": "data.col",
+                "scale": "color"
+              },
+              "width": {
+                "band": true,
+                "offset": -1,
+                "scale": "x"
+              },
+              "x": {
+                "field": "data.idx",
+                "scale": "x"
+              },
+              "y": {
+                "field": "y",
+                "scale": "y"
+              },
+              "y2": {
+                "field": "y2",
+                "scale": "y"
+              }
+            }
+          },
+          "type": "rect"
+        }
+      ],
+      "type": "group"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "padding": 0.2,
+      "range": "width",
+      "type": "ordinal",
+      "zero": false
+    },
+    {
+      "domain": {
+        "data": "stats",
+        "field": "sum"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.col"
+      },
+      "name": "color",
+      "range": [
+        "#fbb4ae",
+        "#b3cde3",
+        "#ccebc5",
+        "#decbe4",
+        "#fed9a6",
+        "#ffffcc",
+        "#e5d8bd",
+        "#fddaec",
+        "#f2f2f2"
+      ],
+      "type": "ordinal"
+    }
+  ],
+  "width": 600
+}

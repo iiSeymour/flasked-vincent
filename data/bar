@@ -1,0 +1,225 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "data",
+          "idx": 0,
+          "val": 26
+        },
+        {
+          "col": "data",
+          "idx": 1,
+          "val": 11
+        },
+        {
+          "col": "data",
+          "idx": 2,
+          "val": 35
+        },
+        {
+          "col": "data",
+          "idx": 3,
+          "val": 91
+        },
+        {
+          "col": "data",
+          "idx": 4,
+          "val": 46
+        },
+        {
+          "col": "data",
+          "idx": 5,
+          "val": 54
+        },
+        {
+          "col": "data",
+          "idx": 6,
+          "val": 87
+        },
+        {
+          "col": "data",
+          "idx": 7,
+          "val": 80
+        },
+        {
+          "col": "data",
+          "idx": 8,
+          "val": 94
+        },
+        {
+          "col": "data",
+          "idx": 9,
+          "val": 85
+        },
+        {
+          "col": "data",
+          "idx": 10,
+          "val": 59
+        },
+        {
+          "col": "data",
+          "idx": 11,
+          "val": 82
+        },
+        {
+          "col": "data",
+          "idx": 12,
+          "val": 33
+        },
+        {
+          "col": "data",
+          "idx": 13,
+          "val": 47
+        },
+        {
+          "col": "data",
+          "idx": 14,
+          "val": 68
+        },
+        {
+          "col": "data",
+          "idx": 15,
+          "val": 91
+        },
+        {
+          "col": "data",
+          "idx": 16,
+          "val": 85
+        },
+        {
+          "col": "data",
+          "idx": 17,
+          "val": 92
+        },
+        {
+          "col": "data",
+          "idx": 18,
+          "val": 26
+        },
+        {
+          "col": "data",
+          "idx": 19,
+          "val": 63
+        },
+        {
+          "col": "data",
+          "idx": 20,
+          "val": 99
+        }
+      ]
+    },
+    {
+      "name": "stats",
+      "source": "table",
+      "transform": [
+        {
+          "keys": [
+            "data.idx"
+          ],
+          "type": "facet"
+        },
+        {
+          "type": "stats",
+          "value": "data.val"
+        }
+      ]
+    }
+  ],
+  "height": 300,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "keys": [
+              "data.col"
+            ],
+            "type": "facet"
+          },
+          {
+            "height": "data.val",
+            "point": "data.idx",
+            "type": "stack"
+          }
+        ]
+      },
+      "marks": [
+        {
+          "properties": {
+            "enter": {
+              "fill": {
+                "field": "data.col",
+                "scale": "color"
+              },
+              "width": {
+                "band": true,
+                "offset": -1,
+                "scale": "x"
+              },
+              "x": {
+                "field": "data.idx",
+                "scale": "x"
+              },
+              "y": {
+                "field": "y",
+                "scale": "y"
+              },
+              "y2": {
+                "field": "y2",
+                "scale": "y"
+              }
+            }
+          },
+          "type": "rect"
+        }
+      ],
+      "type": "group"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "range": "width",
+      "type": "ordinal",
+      "zero": false
+    },
+    {
+      "domain": {
+        "data": "stats",
+        "field": "sum"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.col"
+      },
+      "name": "color",
+      "range": "category20",
+      "type": "ordinal"
+    }
+  ],
+  "width": 600
+}
