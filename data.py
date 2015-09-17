@@ -50,4 +50,4 @@ import pandas.io.data as web
 all_data = {}
 for ticker in ['AAPL', 'IBM', 'YHOO', 'MSFT']:
     all_data[ticker] = web.get_data_yahoo(ticker, '1/1/2012', '1/1/2014')
-price = pd.DataFrame({tic: data['Adj Close'] for tic, data in all_data.iteritems()})
+price = pd.DataFrame({tic: data['Adj Close'] for tic, data in iter(all_data.items())})
