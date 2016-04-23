@@ -2,7 +2,7 @@
 
 Demo [Flask](http://flask.pocoo.org/) application of using [Vincent](https://github.com/wrobstory/vincent) to generate [D3](http://d3js.org/) charts using [Vega](http://trifacta.github.io/vega/) grammar. Using the awesome [Flask](http://flask.pocoo.org/) framework and the [Vincent](https://github.com/wrobstory/vincent) library makes it ridiculously easy to create [D3](http://d3js.org/) visualization without writing *any* client side code.
 
-### Requirments
+### Requirements
 
  - Flask
  - Vincent
