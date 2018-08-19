@@ -5,13 +5,17 @@ Demo [Flask](http://flask.pocoo.org/) application of using [Vincent](https://git
 ### Requirements
 
  - Flask
+ - Pandas
  - Vincent
 
 ### Running
 ```bash
 $ git clone https://github.com/iiSeymour/flasked-vincent
 $ cd flasked-vincent
-$ ./vincent.app
+$ python3 -m venv venv3
+$ source venv3/bin/activate
+$ pip install -r requirements.txt
+$ ./app.py
 ```
 
 Visit [http://localhost:5000]() in your browser, that's it!

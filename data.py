@@ -1,13 +1,11 @@
-import random
-import pandas as pd
-
 """
 Some data to plot, pull from:
-
 http://vincent.readthedocs.org/en/latest/quickstart.html#quick-data
-
 Copyright 2013, Rob Story, Dan Miller, et. al..
 """
+
+import random
+import pandas as pd
 
 #Iterable
 list_data = [10, 20, 30, 20, 15, 30, 45]
@@ -45,9 +43,3 @@ data_3 = {}
 for cat in cat_4:
     data_3[cat] = [random.randint(10, 100) for x in index_4]
 df_2 = pd.DataFrame(data_3, index=index_4)
-
-import pandas.io.data as web
-all_data = {}
-for ticker in ['AAPL', 'IBM', 'YHOO', 'MSFT']:
-    all_data[ticker] = web.get_data_yahoo(ticker, '1/1/2012', '1/1/2014')
-price = pd.DataFrame({tic: data['Adj Close'] for tic, data in iter(all_data.items())})
